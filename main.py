@@ -1,0 +1,1 @@
+# A script is a file containing operations, that can be read and executed by an interpretor later on
