@@ -30,3 +30,8 @@ print(super_variable)
 # 3. imports from other files in your project
 
 # You should also separate the 3 groups by a line, and order them alphabetically.
+
+# What is the point of modules? They allow you to better organize and reuse code. Instead of copy pasting
+# the same function definition between multiple files, you can define it in a single module, and then import
+# that module where needed. Functions keep things DRY within a single module, modules keep things DRY across
+# your project. 
