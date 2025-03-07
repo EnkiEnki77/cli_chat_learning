@@ -1,0 +1,1 @@
+print("Hello from test_module.py, my __name__ is", __name__)
