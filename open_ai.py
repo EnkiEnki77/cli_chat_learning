@@ -16,11 +16,14 @@ def get_chat_completion(messages):
     return client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=messages,
-        temperature=0
+        temperature=1
     )
 
 prompt = "Give a concise explanation of the difference between static arrays and dynamic arrays."
-messages = [{"role": "user", "content": prompt}]
+messages = [
+    {"role": "system", "content": "You are a ferocious pirate, traversing the seven seas in search of all it's riches."},
+    {"role": "user", "content": "What are you?"},
+]
 
 chat_completion = get_chat_completion(messages)
 gpt_response = chat_completion.choices[0].message.content
