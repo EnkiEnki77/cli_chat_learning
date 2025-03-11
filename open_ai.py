@@ -58,9 +58,40 @@ zero_shot_prompt = "Write a short paragraph about the importance of learning how
 
 few_shot_prompt = "Come up with 5 questions and answers on geography and write them in the following style: Question: What is the capital of France? Answer: Paris."
 
+# messages = [
+#     {   "role": "user",
+#         "content": few_shot_prompt}
+# ]
+
+
+
+# Chain of thought prompting prompts an LLM to explain it's reasoning for a response step by step. Helping
+# simulate human like thought processes. It encourages LLM's to break down complex problems into more
+# manageable pieces. Its not just about the end result, but also the path taken to reach it. CoT allows
+# LLM's to arrive at more logical conclusions.
+
+# CoT is very helpful for programming assistance, or to help you what's going on in a piece of code.
+
+# CoT should be clear, structured, and goal oriented. They should specific enough to output the desired
+# thought process, but flexible enough for the LLM to flex its problem solving skills.
+
+# Example prompt for programming: Please write a Python code which defines a function sorting list of
+# integers via bubble sort.
+# Think step-by-step, strictly following the instructions about code structure given below.
+#
+# INSTRUCTIONS:
+# 1. Given a list as an input, get its length and store it in a variable.
+# 2. In the loop from the first to the penultimate element of the list, compare the current integer with its next neighbor.
+# 3. If the neighbor is less than current element, swap them.
+# 4. Else, do nothing and proceed to the next element.
+# 5. Repeat until the loop ends.
+
+# You can combine few shot prompting with chain of thought to get an even more accurate response.
+chain_of_thought_prompt = "Question: Roger has 5 tennis balls. He buys 2 more cans of tennis balls. Each can has 3 tennis balls. How many tennis balls does he have now? Answer: Roger started with 5 balls. 2 cans of 3 tennis balls each is 6 tennis balls. 5 + 6 = 11. The answer is 11. Question: The cafeteria had 23 apples. If they used 20 to make lunch and bought 6 more, how many apples do they have?"
+
 messages = [
     {   "role": "user",
-        "content": few_shot_prompt}
+        "content": chain_of_thought_prompt}
 ]
 
 # messages = [

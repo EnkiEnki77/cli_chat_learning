@@ -13,3 +13,5 @@ module_to_import.greet(module_to_import.name, module_to_import.l_name)
 # module called math. This will cause errors if you try to utilize the builtin. Suffix _script to your
 # modules to avoid this name shadowing problem.
 
+int_list = [1, 2, 3]
+print(sum(int_list))
