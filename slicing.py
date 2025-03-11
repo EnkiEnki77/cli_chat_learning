@@ -31,3 +31,8 @@ print(whole_array)
 # Copies the whole array, stepped by 2
 whole_array_stepped = array[::step]
 print(whole_array_stepped)
+
+email = "someone@gmail.com"
+# Grab index of specific character to act as start/end for slicing
+index = email.index("@")
+print(email[:index])
